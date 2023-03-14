@@ -1,4 +1,4 @@
-package com.haydenc.petclinic;
+package com.haydenC.PetClinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
