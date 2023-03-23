@@ -2,10 +2,11 @@ package com.haydenC.PetClinic.services.map;
 
 import com.haydenC.PetClinic.model.Vet;
 import com.haydenC.PetClinic.services.CrudService;
+import com.haydenC.PetClinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
