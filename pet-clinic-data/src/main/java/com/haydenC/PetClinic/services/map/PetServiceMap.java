@@ -3,9 +3,10 @@ package com.haydenC.PetClinic.services.map;
 import com.haydenC.PetClinic.model.Pet;
 import com.haydenC.PetClinic.services.CrudService;
 import com.haydenC.PetClinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
