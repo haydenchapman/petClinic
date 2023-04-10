@@ -14,6 +14,19 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>io.spring.javaformat</groupId>
+                <artifactId>spring-javaformat-maven-plugin</artifactId>
+                <version>${spring-format.version}</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -42,6 +55,18 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        <!-- webjars -->
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${webjars-bootstrap.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>font-awesome</artifactId>
+            <version>${webjars-font-awesome.version}</version>
+        </dependency>
+        <!-- end of webjars -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -53,6 +78,14 @@
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Web dependencies -->
+        <webjars-bootstrap.version>5.2.3</webjars-bootstrap.version>
+        <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
+
+        <jacoco.version>0.8.8</jacoco.version>
+        <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
+        <spring-format.version>0.0.38</spring-format.version>
     </properties>
 
 </project>
